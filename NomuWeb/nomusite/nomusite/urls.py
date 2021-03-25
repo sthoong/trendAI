@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', welcome),
     path('client.html/<str:id>', clientReport),
+    path('client2.html/<str:id>', clientReport),
     path('sector.html/<str:id>', sectorReport),
     path('market.html/<str:id>', marketReport),
 ]

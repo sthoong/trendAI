@@ -61,7 +61,7 @@
 				<h3>Stocks you may be interested</h3>
 				<ul>
 					<li>7201.T</li>
-					<li>7203.T</li>
+					<li>8604.T</li>
 					<li>8035.T</li>
 				</ul>
 			</div>
@@ -69,16 +69,17 @@
 				<h3>Sectors recommended</h3>
 				<ul>
 					<li>Automobile</li>
-					<li>Medical</li>
+					<li>Brokerage</li>
 					<li>Semiconductor</li>
 				</ul>
 			</div>
 			<div class="content_box">
 				<h3>Recommended Reports</h3>
 				<ul>
-					<li>Japan Equities Stategy 2020</li>
+					<li>Japan Equities Strategy 2020</li>
 					<li>半導体製造業界,押寄せる技術進化の波</li>
-					<li>Japan Equities Stategy 2020</li>
+					<li>Japan Equities Strategy 2020</li>
+					<li>"銀行證券セクター"</li>
 				</ul>
 			</div>
 			<div class="content_box content_box_last">
@@ -87,9 +88,9 @@
 					<li>
 						<p>On Client</p>
 						<select name="client" id="client">
-							<option value="RM0121">RM0121</option>
-							<option value="RM0231">RM0231</option>
-							<option value="RM3557">RM3557</option>
+							<option value="RM259522">RM259522</option>
+							<option value="RM341522">RM341522</option>
+							<option value="RM259588">RM259588</option>
 						</select>
 					</li>
 					<li>
@@ -113,7 +114,7 @@
 			</div>
 		</div>
 		<div class="col_w460 last_col">
-			<div class="radarChart"></div>
+			<div class="radarChart2"></div>
 		</div>
 	</div>
 </div>
@@ -141,24 +142,24 @@
 						{axis:"DividendYield",value:.65}
 					]
 				},
-				{ name: 'Honda',
+				{ name: 'Suzuki',
 					axes: [
-						{axis:"RevenueGrowth",value:0.27},
-						{axis:"ProfitGrowth",value:0.16},
-						{axis:"PBR",value:0.35},
-						{axis:"PER",value:0.13},
-						{axis:"EVtoEBITDA",value:0.20},
-						{axis:"DividendYield",value:0.13}
+						{axis:"RevenueGrowth",value:0.97},
+						{axis:"ProfitGrowth",value:0.44},
+						{axis:"PBR",value:0.1},
+						{axis:"PER",value:0.33},
+						{axis:"EVtoEBITDA",value:0.69},
+						{axis:"DividendYield",value:0.12}
 					]
 				},
-				{ name: 'Tokyo Electron',
+				{ name: 'Nomura Securities',
 					axes: [
-						{axis:"RevenueGrowth",value:0.11},
-						{axis:"ProfitGrowth",value:0.05},
-						{axis:"PBR",value:0.01},
+						{axis:"RevenueGrowth",value:0.32},
+						{axis:"ProfitGrowth",value:0.75},
+						{axis:"PBR",value:0.4},
 						{axis:"PER",value:0.13},
-						{axis:"EVtoEBITDA",value:0.4},
-						{axis:"DividendYield",value:0.7}
+						{axis:"EVtoEBITDA",value:0.54},
+						{axis:"DividendYield",value:0.11}
 					]
 				}
 			];
@@ -181,7 +182,7 @@
 			};
 
 			// Draw the chart, get a reference the created svg element :
-			let svg_radar2 = RadarChart(".radarChart", data, radarChartOptions2);
+			let svg_radar2 = RadarChart(".radarChart2", data, radarChartOptions2);
 		</script>
 </body>
 </html>
