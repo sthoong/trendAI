@@ -17,12 +17,12 @@ from django.contrib import admin
 from django.urls import path
 
 from webpage.views import welcome, clientReport, marketReport, sectorReport
+from nomudata.views import clientAttributeDetail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', welcome),
-    path('client.html/<str:id>', clientReport),
-    path('client2.html/<str:id>', clientReport),
+    path('client.html/<str:id>', clientAttributeDetail),
     path('sector.html/<str:id>', sectorReport),
     path('market.html/<str:id>', marketReport),
 ]
