@@ -60,25 +60,25 @@
 			<div class="content_box">
 				<h3>Stocks you may be interested</h3>
 				<ul>
-					<li>7201.T</li>
-					<li>7203.T</li>
-					<li>8035.T</li>
+					{% for tick in tickerList %}
+					<li>{{ tick }}</li>
+					{% endfor %}
 				</ul>
 			</div>
 			<div class="content_box">
 				<h3>Sectors recommended</h3>
 				<ul>
-					<li>Automobile</li>
-					<li>Medical</li>
-					<li>Semiconductor</li>
+					{% for sector in sectorList %}
+					<li>{{ sector }}</li>
+					{% endfor %}
 				</ul>
 			</div>
 			<div class="content_box">
 				<h3>Recommended Reports</h3>
 				<ul>
-					<li>Japan Equities Stategy 2020</li>
-					<li>半導体製造業界,押寄せる技術進化の波</li>
-					<li>Japan Equities Stategy 2020</li>
+					{% for report in reportList %}
+					<li>{{ report }}</li>
+					{% endfor %}
 				</ul>
 			</div>
 			<div class="content_box content_box_last">
