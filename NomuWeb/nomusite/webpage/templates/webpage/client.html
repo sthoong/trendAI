@@ -58,7 +58,7 @@
 	<div id="tooplate_content">
 		<div class="col_w460">
 			<div class="content_box">
-				<h3>Stocks you may be interested</h3>
+				<h3>Recommended Stocks</h3>
 				<ul>
 					{% for tick in tickerList %}
 					<li>{{ tick }}</li>
@@ -66,7 +66,7 @@
 				</ul>
 			</div>
 			<div class="content_box">
-				<h3>Sectors recommended</h3>
+				<h3>Recommended Sector</h3>
 				<ul>
 					{% for sector in sectorList %}
 					<li>{{ sector }}</li>
@@ -82,30 +82,30 @@
 				</ul>
 			</div>
 			<div class="content_box content_box_last">
-				<h3>What others are viewing</h3>
+				<h3>Recommendation for Similar clients</h3>
 				<ul>
 					<li>
-						<p>On Client</p>
+						<p>Clients</p>
 						<select name="client" id="client">
-							<option value="RM0121">RM0121</option>
-							<option value="RM0231">RM0231</option>
-							<option value="RM3557">RM3557</option>
+							{% for similarClient in similarClientList %}
+							<option value="{{ similarClient }}">{{ similarClient }}</option>
+							{% endfor %}
 						</select>
 					</li>
 					<li>
 						<p>On Tick</p>
 						<select name="tick" id="tick">
-							<option value="7203@JT">7203@JT</option>
-							<option value="7201@JT">7201@JT</option>
-							<option value="8035@JT">8035@JT</option>
+							{% for similarTick in similarTickerList %}
+							<option value="{{ similarTick }}">{{ similarTick }}</option>
+							{% endfor %}
 						</select>
 					</li>
 					<li>
 						<p>On Report</p>
 						<select name="report" id="report">
-							<option value="rpt1">Report on Emerging ASEAN Market</option>
-							<option value="rpt2">Dow Jones statistic</option>
-							<option value="rpt3">A review on Medical Industry</option>
+							{% for similarReport in similarReportList %}
+							<option value="{{ similarReport }}">{{ similarReport }}</option>
+							{% endfor %}
 						</select>
 
 					</li>
@@ -131,7 +131,7 @@
 			//////////////////////////////////////////////////////////////
 
 			var data = [
-				{ name: 'Toyota',
+				{ name: '{{ clientId }}',
 					axes: [
 						{axis:"RevenueGrowth",value:0.22},
 						{axis:"ProfitGrowth",value:0.28},
@@ -141,7 +141,7 @@
 						{axis:"DividendYield",value:.65}
 					]
 				},
-				{ name: 'Honda',
+				{ name: 'Others',
 					axes: [
 						{axis:"RevenueGrowth",value:0.27},
 						{axis:"ProfitGrowth",value:0.16},
@@ -151,7 +151,7 @@
 						{axis:"DividendYield",value:0.13}
 					]
 				},
-				{ name: 'Tokyo Electron',
+				{ name: 'Sector',
 					axes: [
 						{axis:"RevenueGrowth",value:0.11},
 						{axis:"ProfitGrowth",value:0.05},
@@ -176,7 +176,7 @@
 			  roundStrokes: true,
 			  color: d3.scaleOrdinal().range(["#EDC951","#CC333F","#00A0B0"]),
 				format: '.0f',
-				legend: { title: '{{ clientId }}', translateX: 100, translateY: 40 },
+				legend: { title: 'Performance Chart', translateX: 100, translateY: 40 },
 				unit: '$'
 			};
 
